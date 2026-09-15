@@ -1,13 +1,272 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #eee;
+}
+
+/* Header */
+
+header {
+  background-color: white;
+  padding: 20px 0;
+}
+
+header>div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+header h1 {
+  margin: 0;
+  cursor: pointer;
+}
+
+.cart-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.cart-icon i {
+  font-size: 30px;
+  font-style: normal;
+}
+
+.cart-icon span {
+  background-color: red;
+  color: white;
+  border: 2px solid red;
+  border-radius: 50%;
+  min-width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Home */
+
+.products {
+  width: 90%;
+  max-width: 1400px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.product-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+}
+
+.product-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.product-card h2 {
+  font-size: 20px;
+}
+
+.product-card p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.product-card button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Cart */
+
+.page-title {
+  width: 90%;
+  max-width: 1400px;
+  margin: 40px auto 0;
+}
+
+.cart-page {
+  display: grid;
+  grid-template-columns: 1fr 450px;
+  gap: 60px;
+  width: 90%;
+  max-width: 1400px;
+  margin: 30px auto 50px;
+}
+
+.cart {
+  width: 100%;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  position: relative;
+  background-color: white;
+}
+
+.cart-item img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-info h2 {
+  margin-top: 0;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.quantity button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.quantity span {
+  min-width: 20px;
+  text-align: center;
+}
+
+.delete-btn {
+  border: none;
+  background: transparent;
+  color: red;
+  cursor: pointer;
+  font-size: 30px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+/* Order Summary */
+
+.order-summary {
+  width: 100%;
+  height: fit-content;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 18px 0;
+}
+
+.total {
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #000;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.empty-cart {
+  width: 90%;
+  max-width: 1400px;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.empty-cart-content {
+  background-color: white;
+  max-width: 500px;
+  margin: auto;
+  padding: 50px 30px;
+  border-radius: 15px;
+  border: 1px solid #ddd;
+}
+
+.empty-icon {
+  font-size: 60px;
+}
+
+.empty-cart h2 {
+  margin-bottom: 10px;
+}
+
+.empty-cart p {
+  color: #777;
+  margin-bottom: 25px;
+}
+
+.empty-cart button {
+  padding: 14px 30px;
+  border: none;
+  border-radius: 8px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.go-home {
+  width: 90%;
+  max-width: 1400px;
+  margin: 20px auto 50px;
+}
+
+.go-home button {
+  padding: 14px 30px;
+  border: none;
+  border-radius: 8px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
 }
